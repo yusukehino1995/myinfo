@@ -1,7 +1,7 @@
 const API_KEY = '7258e572e1b41a5ee19c102a355a4242';
 const ABS_TMP_DIFF = 273;
 
-(function() {
+$(function() {
   var formSpinner = $('#form-spinner');
   var formError = $('#form-error');
   var formResult = $('#form-result');

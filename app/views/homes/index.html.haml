@@ -1,43 +1,30 @@
-!!!
-%html
-  %head
-    %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :integrity => "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", :rel => "stylesheet"}/
-    -# %link{:href => "./font-awesome/css/font-awesome.min.css", :rel => "stylesheet"}/
-    :css
-      #form-spinner, #form-error, #form-result {
-        display: none;
-      }
-    %script{:crossorigin => "anonymous", :integrity => "sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", :src => "https://code.jquery.com/jquery-3.1.0.min.js"}
-    -# %script{:src => "./script.js"}
-    %title JS Weather API Sample
-  %body
-    .container
-      .row
-        .col-md-6.col-md-offset-3
-          .panel.panel-default
-            .panel-heading
-              %h1.panel-title JS Weather API Sample
-            .panel-body
-              %form#weather-form.form-inline
-                .form-group
-                  %input#weather-form-city.form-control{:placeholder => "City name", :type => "text"}/
-                %button.btn.btn-primary{:type => "submit"} Send
-                %i#form-spinner.fa.fa-spinner.fa-spin{"aria-hidden" => "true"}
-              #form-error.alert.alert-danger
-                %p
-                  The city name you entered above is invalid.
-                  %br/
-                  Edit it and try again.
-              #form-result.alert.alert-info
-                %p
-                  The weather in
-                  %b#result-city-name
-                  is
-                  = succeed "." do
-                    %b#result-weather
-                  %br/
-                  The temperature is
-                  = succeed "\u00B0C." do
-                    %b#result-temp
-                  %br/
-                  %span#result-datetime
+.container
+  .row
+    .col-md-6.col-md-offset-3
+      .panel.panel-default
+        .panel-heading
+          %h1.panel-title JS Weather API Sample
+        .panel-body
+          %form#weather-form.form-inline
+            .form-group
+              %input#weather-form-city.form-control{:placeholder => "City name", :type => "text"}/
+            %button.btn.btn-primary{:type => "submit"} Send
+            %i#form-spinner.fa.fa-spinner.fa-spin{"aria-hidden" => "true"}
+          #form-error.alert.alert-danger
+            %p
+              The city name you entered above is invalid.
+              %br/
+              Edit it and try again.
+          #form-result.alert.alert-info
+            %p
+              The weather in
+              %b#result-city-name
+              is
+              = succeed "." do
+                %b#result-weather
+              %br/
+              The temperature is
+              = succeed "\u00B0C." do
+                %b#result-temp
+              %br/
+              %span#result-datetime
