@@ -1,24 +1,38 @@
-# README
+## usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|email|text|null: false|
+|password|string|null: false|
 
-Things you may want to cover:
+### Association
+- has_many :addresses
+- has_many :routes
+- has_many :keywords
 
-* Ruby version
+## addressesテーブル
 
-* System dependencies
+|Column|Type|Options|
+|------|----|-------|
+|address|text|null: false, index: true|
 
-* Configuration
+### Association
+- belongs_to user
 
-* Database creation
+## routesテーブル
 
-* Database initialization
+|Column|Type|Options|
+|------|----|-------|
+|route|integer|null: false, index: true|
 
-* How to run the test suite
+### Association
+- belongs_to :user
 
-* Services (job queues, cache servers, search engines, etc.)
+## keywordsテーブル
 
-* Deployment instructions
+|Column|Type|Options|
+|------|----|-------|
+|keyword|text|null: true, index:true|
 
-* ...
+### Association
+- belongs_to :user
