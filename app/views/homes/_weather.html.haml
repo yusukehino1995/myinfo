@@ -7,7 +7,9 @@
         .panel-body
           %form#weather-form.form-inline
             .form-group
-              %input#weather-form-city.form-control{placeholder: "City name ex) 新宿　=> shinjuku", type: "text"}/
+              %p
+                Input City name
+              %input#weather-form-city.form-control{placeholder: " ex) 新宿=> shinjuku", type: "text"}/
             %button.btn.btn-primary{:type => "submit"} Send
             %i#form-spinner.fa.fa-spinner.fa-spin{"aria-hidden": "true"}
           #form-error.alert.alert-danger

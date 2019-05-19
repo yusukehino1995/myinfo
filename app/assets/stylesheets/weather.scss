@@ -1,8 +1,13 @@
-.contents{
-  height: 100vh;
+.weather-contents{
+  height: 500px;
+  width: 50vw;
+  .weather-content{
+    padding: 10px 20px;
+  }
 }
+
 .form-control{
-  width:500px;
+  width:300px;
 }
 #form-spinner, #form-error, #form-result {
   display: none;
